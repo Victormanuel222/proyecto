@@ -1,0 +1,23 @@
+<%- include("templates/encabezado.ejs")  %>
+<%- include("templates/menu.ejs") %>
+
+<h1>Modificar usuario</h1>
+<form action="/modificarUsuario" method="post" id="formulario">
+    <div>
+        <input type="hidden" value=<%=Usuario.id %>name="id" id="id">
+        <input type="text" value=<%=Usuario.usuario %> name="usuario" id="usuario" placeholder="usuario" autofocus>
+        <span id="mensajeUsuario"></span>
+    </div>
+    <div>
+        <input type="text" value=<%=Usuario.nombre %> name="nombre" id="nombre" placeholder="nombre" >
+        <span id="mensajeUsuario"></span>
+    </div>
+    <div>
+        <input type="text" value=<%=Usuario.password %> name="password" id="password" placeholder="password" >
+        <span id="mensajeUsuario"></span>
+    </div>
+    <div>
+        <button type="submit"> Guardar Usuario </button>
+    </div>
+</form>
+<%- include("templates/pie.ejs") %>
